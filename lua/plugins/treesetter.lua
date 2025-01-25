@@ -1,6 +1,9 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
+  dependencies = {
+    "windwp/nvim-ts-autotag",
+  },
   main = 'nvim-treesitter.configs', -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
@@ -18,9 +21,13 @@ return { -- Highlight, edit, and navigate code
       'bash',
       'css',
       'html',
+      'vim'
+    },
+    autotag = {
+        enable = true,
     },
     -- Autoinstall languages that are not installed
-    auto_install = true,
+    auto_install = false,
     highlight = {
       enable = true,
       -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
