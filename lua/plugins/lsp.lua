@@ -1,6 +1,7 @@
 return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
 		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
@@ -130,22 +131,22 @@ return {
 					require("lspconfig")[server_name].setup(server)
 				end,
 				["lua_ls"] = function()
-                    -- configure lua server (with special settings)
-                    lspconfig["lua_ls"].setup({
-                      capabilities = capabilities,
-                      settings = {
-                        Lua = {
-                          -- make the language server recognize "vim" global
-                          diagnostics = {
-                            globals = { "vim" },
-                          },
-                          completion = {
-                            callSnippet = "Replace",
-                          },
-                        },
-                      },
-                    })
-                end,
+					-- configure lua server (with special settings)
+					lspconfig["lua_ls"].setup({
+						capabilities = capabilities,
+						settings = {
+							Lua = {
+								-- make the language server recognize "vim" global
+								diagnostics = {
+									globals = { "vim" },
+								},
+								completion = {
+									callSnippet = "Replace",
+								},
+							},
+						},
+					})
+				end,
 			},
 		})
 	end,
