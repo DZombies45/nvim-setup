@@ -1,3 +1,15 @@
+<!-- vim-markdown-toc Marked -->
+
+* [My NeoVim Setup](#my-neovim-setup)
+    * [install](#install)
+    * [Post Installation](#post-installation)
+    * [FAQ](#faq)
+    * [Install Recipes](#install-recipes)
+        * [Windows Install](#windows-install)
+        * [Linux Install](#linux-install)
+
+<!-- vim-markdown-toc -->
+
 ## My NeoVim Setup
 
 config base on [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and [dam9000/kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
@@ -121,6 +133,9 @@ choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 ```
 
 </details>
+
+#### Windows Install
+
 <details><summary>WSL (Windows Subsystem for Linux)</summary>
 
 ```

@@ -157,7 +157,9 @@ return { -- Autocompletion
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+                { name = 'render-markdown' },
 			},
+			
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)

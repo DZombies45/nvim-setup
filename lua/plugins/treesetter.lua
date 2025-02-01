@@ -2,7 +2,7 @@ return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   dependencies = {
-    "windwp/nvim-ts-autotag",
+    'windwp/nvim-ts-autotag',
   },
   main = 'nvim-treesitter.configs', -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -21,10 +21,10 @@ return { -- Highlight, edit, and navigate code
       'bash',
       'css',
       'html',
-      'vim'
+      'vim',
     },
     autotag = {
-        enable = true,
+      enable = true,
     },
     -- Autoinstall languages that are not installed
     auto_install = false,
@@ -44,3 +44,4 @@ return { -- Highlight, edit, and navigate code
   --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
   --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 }
+
