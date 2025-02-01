@@ -40,13 +40,13 @@ return {
     'mzlogin/vim-markdown-toc',
     ft = 'markdown',
     config = function()
-      vim.keymap.set('n', '<leader>mc', '<cme>GenTocMarkdown<CR>', { desc = 'generate toc markdown' })
+      vim.keymap.set('n', '<leader>mc', '<cmd>GenTocMarked<CR>', { desc = 'generate toc markdown' })
     end,
   },
   -- Markdown tabble maker
   {
     'dhruvasagar/vim-table-mode',
-    ft = 'markdowni',
+    ft = 'markdown',
     config = function()
       vim.g.table_mode_corner =
         '|', vim.keymap.set('n', '<leader>mt', '<cmd>TableModeToggle<CR>', { desc = 'start tabble mode markdown' })
@@ -59,7 +59,7 @@ return {
     ft = 'markdown',
     config = function()
       vim.g.mkdp_auto_start =
-        0, vim.keymap.set('n', '<leader>mp', '<cmd>MarkdownPreview<CR>', { desc = 'Open Markdown Preview' })
+        0, vim.keymap.set('n', '<leader>mv', '<cmd>MarkdownPreview<CR>', { desc = 'Open Markdown Preview' })
     end,
   },
 }
