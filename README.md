@@ -1,16 +1,15 @@
+## My NeoVim Setup
+
 <!-- vim-markdown-toc Marked -->
 
-* [My NeoVim Setup](#my-neovim-setup)
-    * [install](#install)
-    * [Post Installation](#post-installation)
-    * [FAQ](#faq)
-    * [Install Recipes](#install-recipes)
-        * [Windows Install](#windows-install)
-        * [Linux Install](#linux-install)
+* [install](#install)
+* [Post Installation](#post-installation)
+* [FAQ](#faq)
+* [Install Recipes](#install-recipes)
+    * [Windows Install](#windows-install)
+    * [Linux Install](#linux-install)
 
 <!-- vim-markdown-toc -->
-
-## My NeoVim Setup
 
 config base on [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and [dam9000/kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
 
@@ -117,6 +116,8 @@ This requires:
 Alternatively, one can install gcc and make which don't require changing the config,
 the easiest way is to use choco:
 
+#### Windows Install
+
 1. install [chocolatey](https://chocolatey.org/install)
    either follow the instructions on the page or use winget,
    run in cmd as **admin**:
@@ -134,7 +135,7 @@ choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 
 </details>
 
-#### Windows Install
+#### Linux Install
 
 <details><summary>WSL (Windows Subsystem for Linux)</summary>
 
@@ -147,9 +148,6 @@ sudo apt install make gcc ripgrep unzip git xclip neovim
 ```
 
 </details>
-
-#### Linux Install
-
 <details><summary>Ubuntu Install Steps</summary>
 
 ```
