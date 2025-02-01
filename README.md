@@ -98,6 +98,8 @@ Below you can find OS specific install instructions for Neovim and dependencies.
 
 After installing all the dependencies continue with the [Install Kickstart](#Install-Kickstart) step.
 
+#### Windows Install
+
 <details><summary>Windows with Microsoft C++ Build Tools and CMake</summary>
 Installation may require installing build tools and updating the run command for `telescope-fzf-native`
 
@@ -115,8 +117,6 @@ This requires:
 <details><summary>Windows with gcc/make using chocolatey</summary>
 Alternatively, one can install gcc and make which don't require changing the config,
 the easiest way is to use choco:
-
-#### Windows Install
 
 1. install [chocolatey](https://chocolatey.org/install)
    either follow the instructions on the page or use winget,
