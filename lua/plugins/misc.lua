@@ -28,13 +28,6 @@ return {
       signs = false,
     },
   },
-  {
-    -- High-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup()
-    end,
-  },
   -- make Markdown Tabble Of Content
   {
     'mzlogin/vim-markdown-toc',
