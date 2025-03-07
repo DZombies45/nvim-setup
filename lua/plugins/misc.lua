@@ -45,14 +45,4 @@ return {
         '|', vim.keymap.set('n', '<leader>mt', '<cmd>TableModeToggle<CR>', { desc = 'start tabble mode markdown' })
     end,
   },
-  -- Markdown Preview
-  {
-    'iamcco/markdown-preview.nvim',
-    build = 'cd app && npm install',
-    ft = 'markdown',
-    config = function()
-      vim.g.mkdp_auto_start =
-        0, vim.keymap.set('n', '<leader>mv', '<cmd>MarkdownPreview<CR>', { desc = 'Open Markdown Preview' })
-    end,
-  },
 }

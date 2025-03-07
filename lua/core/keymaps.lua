@@ -106,3 +106,8 @@ opts.desc = 'Open floating diagnostic message'
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
 opts.desc = 'Open diagnostics list'
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+
+-- termux clipboard
+opts.desc = 'copy to clipboard'
+vim.keymap.set('v', '<leader>y', ':<C-u>\'<,\'>w !xclip -selection clipboard<CR><CR>',opts)
+vim.keymap.set('n', '<leader>p', ':r !xclip -selection clipboard -o<CR>', opts)
