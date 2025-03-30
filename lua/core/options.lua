@@ -36,3 +36,22 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+vim.opt.clipboard:append("unnamedplus")
+
+vim.g.clipboard = {
+    name = "termux-clipboard",
+    copy = {
+        ["+"] = "termux-clipboard-set",
+        ["*"] = "termux-clipboard-set",
+    },
+    paste = {
+        ["+"] = function()
+            return vim.fn.systemlist("termux-clipboard-get")[1] or ""
+        end,
+        ["*"] = function()
+            return vim.fn.systemlist("termux-clipboard-get")[1] or ""
+        end,
+    },
+    cache_enabled = 0,
+}

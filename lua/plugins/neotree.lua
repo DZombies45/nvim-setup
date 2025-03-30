@@ -187,7 +187,7 @@ return {
       nesting_rules = {},
       filesystem = {
         filtered_items = {
-          visible = false, -- when true, they will just be displayed differently than normal items
+          visible = true, -- when true, they will just be displayed differently than normal items
           hide_dotfiles = false,
           hide_gitignored = false,
           hide_hidden = false, -- only works on Windows for hidden files/directories
@@ -311,10 +311,10 @@ return {
     vim.keymap.set(
       'n',
       '\\',
-      ':Neotree toggle<CR>',
+      ':Neotree toggle position=left<CR>',
       { noremap = true, silent = true, desc = 'Toggle Neo-tree (reveal/close)' }
     )
-    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { noremap = true, silent = true }) -- focus file explorer
+    --vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { noremap = true, silent = true }) -- focus file explorer
     vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true }) -- open git status window
   end,
 }

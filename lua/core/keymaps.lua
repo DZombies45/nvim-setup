@@ -109,5 +109,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
 -- termux clipboard
 opts.desc = 'copy to clipboard'
-vim.keymap.set('v', '<leader>y', ':<C-u>\'<,\'>w !xclip -selection clipboard<CR><CR>',opts)
-vim.keymap.set('n', '<leader>p', ':r !xclip -selection clipboard -o<CR>', opts)
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', opts)
+opts.desc = 'paste clipboard after cursor'
+vim.keymap.set('n', '<leader>p', '"+p', opts)
+opts.desc = 'paste clipboard after cursor'
+vim.keymap.set('n', '<leader>P', '"+P', opts)
+
