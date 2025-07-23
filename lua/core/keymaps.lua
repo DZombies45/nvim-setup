@@ -115,3 +115,23 @@ vim.keymap.set('n', '<leader>p', '"+p', opts)
 opts.desc = 'paste clipboard after cursor'
 vim.keymap.set('n', '<leader>P', '"+P', opts)
 
+
+function ToggleTabIndent()
+  local expand = vim.bo.expandtab
+  if expand then
+    vim.bo.expandtab = false
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    print("Indent: [TAB]")
+  else
+    vim.bo.expandtab = true
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    print("Indent: [SPACES]")
+  end
+end
+
+opts.desc = 'toggle tab to tab or spaces'
+vim.keymap.set('n', '<leader>tt', ':lua ToggleTabIndent()<CR>', { noremap = true, silent = true })

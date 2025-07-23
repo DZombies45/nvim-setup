@@ -39,27 +39,6 @@ end
 return {
   -- uuid generator
   s("uuid", f(function() return uuid() end)),
--- jsdoc
-
-  s("jsdoc", fmt([[
-/**
- * {}
-{}
-
-/**
- * @returns {{}} {}
- *
- * @example
- * ```ts
- * {}
- * ```
- */
-]], {
-    i(1, "Deskripsi fungsi/class/interface"),
-    d(2, generateParams, {}),
-    i(3, "Deskripsi return (opsional)"),
-    i(4, "contohPemakaian();")
-  })),
 
   -- import Minecraft server API
   s("impserver", fmt([[

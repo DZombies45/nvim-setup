@@ -1,6 +1,6 @@
 local options = {
 	autoindent = true,
-	expandtab = true,
+	expandtab = false,
 	shiftwidth = 2,
 	tabstop = 2,
 	softtabstop = 2,
